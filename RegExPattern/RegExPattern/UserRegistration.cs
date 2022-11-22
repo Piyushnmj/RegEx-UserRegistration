@@ -21,7 +21,7 @@ namespace RegExPattern
             }
             else
             {
-                Console.WriteLine($"{firstName} is invalid. Please enter a valid First Name. First word must be capital and Name must contain minimum 3 letters.");
+                Console.WriteLine($"{firstName} is invalid. Please enter a valid First Name. \nFirst word must be capital and Name must contain minimum 3 letters.");
                 FirstName();
             }
         }
@@ -38,7 +38,7 @@ namespace RegExPattern
             }
             else
             {
-                Console.WriteLine($"{lastName} is invalid. Please enter a valid Last Name. First word must be capital and Name must contain minimum 3 letters.");
+                Console.WriteLine($"{lastName} is invalid. Please enter a valid Last Name. \nFirst word must be capital and Name must contain minimum 3 letters.");
                 LastName();
             }
         }
@@ -81,7 +81,7 @@ namespace RegExPattern
         {
             Console.Write("\nEnter a Password: ");
             string password = Console.ReadLine();
-            var regex = new Regex(@"^[A-Za-z]{1}[A-Za-z0-9]{7,}");
+            var regex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z]).{8,15}$");
             bool matchRes = regex.IsMatch(password);
             if (matchRes == true)
             {
@@ -89,7 +89,7 @@ namespace RegExPattern
             }
             else
             {
-                Console.WriteLine($"{password} is invalid. Please enter a valid password. Must contain atleast 8 characters.");
+                Console.WriteLine($"{password} is invalid. Please enter a valid password. \nMust contain atleast 8 characters. \nShould have atleat one uppercase.");
                 Password();
             }
         }

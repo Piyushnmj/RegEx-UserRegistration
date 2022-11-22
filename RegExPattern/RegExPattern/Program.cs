@@ -10,6 +10,7 @@
             UserRegistration objUser = new UserRegistration();
             objUser.FirstName();
             objUser.LastName();
+            objUser.Email();
         }
     }
 }

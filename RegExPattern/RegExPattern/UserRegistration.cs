@@ -72,7 +72,7 @@ namespace RegExPattern
             }
             else
             {
-                Console.WriteLine($"{phoneNumber} is invalid. Please enter a valid phone number");
+                Console.WriteLine($"{phoneNumber} is invalid. Please enter a valid mobile number");
                 PhoneNumber();
             }
         }

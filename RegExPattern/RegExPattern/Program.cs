@@ -11,6 +11,7 @@
             objUser.FirstName();
             objUser.LastName();
             objUser.Email();
+            objUser.PhoneNumber();
         }
     }
 }

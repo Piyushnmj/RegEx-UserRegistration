@@ -89,7 +89,7 @@ namespace RegExPattern
             }
             else
             {
-                Console.WriteLine($"{password} is invalid. Please enter a valid password. \nMust contain atleast 8 characters. \nShould have atleat one uppercase.");
+                Console.WriteLine($"{password} is invalid. Please enter a valid password. \nMust contain atleast 8 characters. \nShould have atleat one uppercase. \nShould have atleast 1 numeric number.");
                 Password();
             }
         }

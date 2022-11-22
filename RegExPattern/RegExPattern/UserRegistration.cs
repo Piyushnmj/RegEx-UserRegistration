@@ -81,7 +81,7 @@ namespace RegExPattern
         {
             Console.Write("\nEnter a Password: ");
             string password = Console.ReadLine();
-            var regex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$");
+            var regex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\D\W).\S{8,15}$");
             bool matchRes = regex.IsMatch(password);
             if (matchRes == true)
             {
@@ -89,7 +89,7 @@ namespace RegExPattern
             }
             else
             {
-                Console.WriteLine($"{password} is invalid. Please enter a valid password. \nMust contain atleast 8 characters. \nShould have atleat one uppercase. \nShould have atleast 1 numeric number.");
+                Console.WriteLine($"{password} is invalid. Please enter a valid password. \nMust contain atleast 8 characters. \nShould have atleat one uppercase. \nShould have atleast 1 numeric number. \nShould have 1 special character.");
                 Password();
             }
         }

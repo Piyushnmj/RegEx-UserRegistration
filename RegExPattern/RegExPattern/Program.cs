@@ -12,6 +12,7 @@
             objUser.LastName();
             objUser.Email();
             objUser.PhoneNumber();
+            objUser.Password();
         }
     }
 }
